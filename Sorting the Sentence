@@ -1,0 +1,28 @@
+class Solution:
+    def sortSentence(self, s: str) -> str:
+        lst=[""]*len(s)
+        l=0
+        for i in range(len(s)):
+            if(s[i]==" " ):
+                 a=int(s[i-1])
+                 indx=int(i-1)
+                 lst[a-1]=s[l:indx]
+                 l=i+1
+            elif(i==len(s)-1):
+                a=int(s[len(s)-1])
+                indx=int(len(s)-1)
+                lst[a-1]=s[l:indx]
+        emp=""
+        for j in range(len(lst)):
+            if(lst[j+1]==""):
+                break
+            else:
+                lst[j]+=" "
+        for la in lst:
+            if(lst[j]==""):
+                break
+            else:
+                emp+=la
+        return(emp)                
+
+
