@@ -1,0 +1,5 @@
+def dominio(s):
+    a=s.index(" ")
+    b=int(s[0:a])
+    c=int(s[a+3:])
+    return((b+c)//2)
